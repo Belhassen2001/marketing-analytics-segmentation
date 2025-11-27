@@ -1,219 +1,94 @@
-🎯 Customer Segmentation & Marketing Analytics Project
-End-to-end Data Analysis • EDA • Clustering • Marketing Insights
-📌 Project Overview
+📊 Customer Behavior Analysis & Segmentation
+Marketing Analytics • Clustering • Campaign Optimization
 
-This project analyzes customer behavior using a real marketing dataset and applies Exploratory Data Analysis (EDA), feature engineering, and K-Means clustering to uncover customer segments and provide actionable marketing recommendations.
+This project explores customer behavior using demographic, spending, and engagement data.
+The goal is to uncover insights that improve marketing performance and guide data-driven customer segmentation.
 
-The goal is to help a retail/marketing team understand:
+🚀 Project Objectives
 
-Who are our most valuable customers?
+Clean and prepare customer marketing data
 
-Which groups respond to campaigns?
+Analyze spending behavior and campaign responsiveness
 
-How should we target each segment?
+Identify key drivers of customer engagement
 
-Which variables drive spending and engagement?
+Build customer segments using machine learning (K-Means)
 
-🧠 Business Problem
+Evaluate campaign performance per segment
 
-Most companies send marketing campaigns blindly — without understanding:
+Generate insights to optimize marketing strategy
 
-which customers spend more
+🧼 Data Preparation
 
-which customers respond well
+Key engineered features:
 
-which customers have high lifetime value
+Total_Spent – Sum of spending across product categories
 
-which segments should be prioritized
+Total_Purchases – Total web, catalog, and store purchases
 
-This project answers the core question:
+Age – Derived from Year of Birth
 
-“Which types of customers should we target to increase revenue and campaign success?”
+Total_Children – Combined number of kids and teens
 
-📂 Dataset Description
+Total_Accepted_Campaigns – Count of accepted marketing campaigns
 
-The dataset contains 2,240 customers with features across:
+Missing values were imputed, numeric inconsistencies cleaned, and features standardized for clustering.
 
-👤 Demographics
+📊 Key Insights
+Spending Behavior
 
-Age
+Higher income strongly predicts higher spending
 
-Marital Status
+Families with more children spend significantly less
 
-Education
+Frequent shoppers are big spenders
 
-Income
+Campaign Performance
 
-Number of children (Kidhome, Teenhome)
+Customers who purchased recently are 20% more likely to respond to campaigns
 
-💰 Spending Behavior
+High-income and high-spending customers are more receptive
 
-Wine, Fruits, Meat, Fish, Sweets, Gold spending
+🧩 Customer Segments
 
-Online, In-Store, Catalog purchases
+Using K-Means (k = 4), four meaningful clusters were identified:
 
-Recency (days since last purchase)
+Segment 0 — Active Senior Shoppers
 
-📣 Marketing Campaigns
+High spenders, high purchase frequency, older age group.
 
-Response to 5 different campaigns
+Segment 1 — Young Low Spenders
 
-Overall response
+Low income, low spending, minimal engagement.
 
-🧹 Feature Engineering Added
+Segment 2 — Large Budget Families
 
-Age
+Older adults with many children, low spending, low income.
 
-Total_Spent
+Segment 3 — High-Income Premium Buyers
 
-Total_Purchases
+Top spenders, highly responsive to marketing, frequent purchasers.
 
-Total_Children
+🎯 Strategic Recommendations
 
-🧽 Data Cleaning Steps
+Focus premium campaigns on Segment 3
 
-Removed whitespace and standardized column names
+Retain and nurture Segment 0
 
-Converted income to numeric
+Use digital and budget-friendly offers for Segment 1
 
-Handled missing values (median imputation for Income)
+Provide low-cost, family-oriented campaigns for Segment 2
 
-Created engineered features
+Use recency-based triggers to increase conversion
 
-Filtered out extreme outliers for clustering
+Personalize products based on segment-specific preferences
 
-Encoded categorical variables where needed
+📈 Tools & Technologies
 
-Normalized numerical variables for K-Means
+Python (Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn)
 
-📊 Exploratory Data Analysis (Key Insights)
-🔍 Income & Spending
+Power BI (Dashboard visualization)
 
-High-income customers spend significantly more
+Machine Learning (K-Means Clustering)
 
-Total_Spent has the strongest connection to campaign response
-
-Most revenue comes from Wines and Meat categories
-
-👨‍👩‍👧 Family Size & Spending
-
-Customers with more children spend less
-
-Families show lower engagement in campaigns
-
-⏳ Recency
-
-Customers who purchased recently respond more
-(negative correlation between Recency & Response)
-
-💬 Correlation Highlights
-
-Positive drivers of campaign response:
-
-Total_Spent (+0.27)
-
-Total_Purchases (+0.16)
-
-Income (+0.13)
-
-Negative drivers:
-
-Recency (–0.20)
-
-Total_Children (–0.17)
-
-🤖 Customer Segmentation (K-Means Clustering)
-📌 Model Process
-
-Selected behavioral and demographic features
-
-Scaled numeric variables
-
-Used Elbow Method → optimal k = 4
-
-Trained a K-Means model with 4 clusters
-
-Visualized segment distribution
-
-🧬 Customer Segment Profiles
-🟦 Segment 0 — “Active Senior Shoppers”
-
-Older
-
-High total spending
-
-Frequent purchasers
-
-Medium–high income
-
-Strong campaign response
-➡️ High value segment
-
-🟩 Segment 1 — “Young Low Spenders”
-
-Young
-
-Low income
-
-Low spending
-
-Rarely respond to campaigns
-➡️ Low value
-
-🟨 Segment 2 — “Large Budget Families”
-
-Several children
-
-Lower income
-
-Very low spending
-➡️ Lowest value
-
-🟥 Segment 3 — “(Replace with your segment summary from your code)”
-
-Example:
-“Middle-aged professionals with stable income, moderate spending, and average engagement.”
-➡️ Medium value segment
-
-📈 Campaign Performance
-
-Segment 0 responds the most
-
-Segment 2 responds the least
-
-Campaign 3 performs best
-
-Recent customers show significantly better engagement
-
-Loyalty-driven campaigns outperform generic ones
-
-💸 Customer Lifetime Value (CLV)
-
-Estimated CLV shows:
-
-Segment 0 has 3.2× higher CLV than Segment 2
-
-High-value customers buy more frequently, spend more, and respond better
-
-Targeting them increases overall ROI
-
-🎯 Final Business Recommendations
-1️⃣ Prioritize Segment 0 for future campaigns
-
-High spending + high response = best ROI.
-
-2️⃣ Create loyalty programs for frequent buyers
-
-Retention is cheaper than acquisition.
-
-3️⃣ Use recency-triggered campaigns
-
-Send promotions within 30–60 days of last purchase.
-
-4️⃣ Reduce spending on large-family segments
-
-Low conversions → budget drain.
-
-5️⃣ Create premium offers for high-income groups
-
-This segment spends disproportionately more.
+Statistical Analysis & Correlation Modeling
